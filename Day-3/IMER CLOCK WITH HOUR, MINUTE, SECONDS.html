@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            align-self: center;
+            background-color: black;
+            color: white;
+            margin: auto;
+            width: 300px;
+            display: flex;
+            height: 100px;
+        }
+        .container>div{
+            width: 33%;
+            margin: auto;
+            padding-left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 id="hour">0 </h1>
+        </div>
+        <div>
+            <h1 id="minute">0 </h1>
+        </div>
+        <div>
+            <h1 id="seconds">0</h1>
+        </div>
+
+
+    </div>
+
+
+</body>
+<script>
+    let hourhd = document.getElementById("hour");
+    let minutehd = document.getElementById("minute");
+    let secondhd = document.getElementById("seconds");
+
+
+    let hour = 0;
+    let minute = 0;
+    let second = 0;
+
+
+    setInterval(() => {
+        second++;
+        if (second == 60) {
+            minute++;
+            minutehd.innerText = minute
+            second = 0;
+            if (minute == 60) {
+                hour++;
+                hourhd.innerText = hour;
+                minute = 0;
+            }
+        }
+        secondhd.innerText = second;
+    }, 1000);
+
+
+</script>
+
+</html>
