@@ -4,9 +4,8 @@ let users = [
     {id: 3, name: "Mary"}
   ];
   
-  let newArr = users.reduce((acc,current)=>{
-    return{
-    currentcurrent.name:current[current.id]
-    }
-    
-  });
+  let newArr = users.reduce((acc,item)=>{
+    acc[item.name] = item.id;
+    return acc;
+  },{});
+  console.log(newArr);
