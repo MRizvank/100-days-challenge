@@ -8,7 +8,7 @@ let prateekMarksData = {
     marks1: 90, 
     marks2: 81,
     marks3: 80,
-    marks4: null,                                                // incomplete!!!!!!!!!!!!!!!!!
+    marks4: null,                                                
     marks5: null,
   }
   
@@ -25,26 +25,25 @@ let prateekMarksData = {
     marks4: null,
     marks5: null,
   }
-  let nrupul={}
-  for(let i in nrupulMarksData){
-    if( nrupulMarksData[i]!=null){
-      nrupul[i]=nrupulMarksData[i];
 
-    }
-  }
-  let prateek={};
-  for(let i in prateekMarksData){
-    if(prateekMarksData[i]!=null){
-      prateek[i]=prateekMarksData[i];
-
-    }
-  }
-  nrupulMarksData=nrupul;
-  prateekMarksData=prateek;
 
   let allStudentsMarksData = [prateekMarksData, nrupulMarksData];
   
-  let massagedData;
+  let massagedData=allStudentsMarksData.reduce((acc,item)=>{
+    let obj={}
+    obj.name=item.name;
+    obj.marks=[];
+    for(let i=1;i<=5;i++){
+      item[`subject${i}`] &&obj.marks.push(
+        {
+          subject:item[`subject${i}`],
+          score:item[`marks${i}`]
+        }
+        )
+    }
+    acc.push(obj)
+    return acc
+  },[])
   
   console.log(massagedData);
   
