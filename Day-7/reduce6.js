@@ -24,8 +24,11 @@ let subjectsData = [
   let newObj =students.reduce((acc,item)=>{
     if(acc[item.name]==undefined){
         acc[item.name]=[newKey[item.subjectID]]
+    }else{
+      acc[item.name].push(newKey[item.subjectID])
+
     }
-    acc[item.name].push(newKey[item.subjectID])
+    
     return acc
 
   },{}) /* your array method here */ 
