@@ -13,6 +13,7 @@ function school(schoolName,location,established,...subjects) {
       },
     }
   }
+  school('ABC School', 'New Delhi', 1991, 'English', 'Hindi', 'Mathematics');
   
   // Problem 2.
   let categoriesDirectory = {
@@ -69,5 +70,5 @@ function school(schoolName,location,established,...subjects) {
   
   },[])
   
-  export { inputArray, outputArray, school, categoriesDirectory, areas, areasDirectory };
+  // export { inputArray, outputArray, school, categoriesDirectory, areas, areasDirectory };
   
