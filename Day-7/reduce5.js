@@ -24,6 +24,9 @@ let subjectsHash = {
   },{}) /* your code here */
   
   console.log(newObj);
+  let obj={
+    id:1,
+    name:"vivek"}
   
   /* 
   ----------------------------------
