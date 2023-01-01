@@ -24,7 +24,9 @@ Creature.prototype.eat=function(){
     console.log(`${this.name} is eating`);
 }
 let cr1=new Creature("apes");
+
 // console.log(cr1.eat());
+
 Object.setPrototypeOf(Humans.prototype,Creature.prototype)
 
 function Humans(name){
